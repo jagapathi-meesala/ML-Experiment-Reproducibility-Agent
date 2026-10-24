@@ -1,0 +1,6 @@
+{
+  "python_version": "3.11.8",
+  "framework": "PyTorch",
+  "framework_version": "2.3.1",
+  "accelerator": "CPU"
+}

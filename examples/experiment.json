@@ -1,0 +1,30 @@
+{
+  "experiment_id": "demo-classifier-run-001",
+  "code_revision": "replace-with-real-commit-sha",
+  "dataset": {
+    "identifier": "demo-dataset-v1",
+    "version": "1.0",
+    "checksum": null
+  },
+  "random_seed": 42,
+  "parameters": {
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "epochs": 10
+  },
+  "environment": {
+    "python_version": "3.11.8",
+    "framework": "PyTorch",
+    "framework_version": "2.3.1",
+    "accelerator": "CPU"
+  },
+  "metrics": {
+    "validation_accuracy": 0.91,
+    "validation_loss": 0.28
+  },
+  "expected_artifacts": [
+    "model.pt",
+    "metrics.json",
+    "config.json"
+  ]
+}

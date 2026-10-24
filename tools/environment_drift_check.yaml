@@ -1,0 +1,19 @@
+name: environment_drift_check
+description: Compare selected recorded environment fields with a supplied reference environment.
+input_schema:
+  type: object
+  additionalProperties: false
+  required:
+    - environment
+    - reference
+  properties:
+    environment:
+      type: object
+    reference:
+      type: object
+output_schema:
+  type: object
+  required:
+    - status
+    - findings
+    - summary

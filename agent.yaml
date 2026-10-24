@@ -1,0 +1,14 @@
+schema_version: "0.1.0"
+name: "ML Experiment Reproducibility Agent"
+description: "Audits machine-learning experiment records for reproducibility gaps and produces evidence-based reports."
+version: "1.0.0"
+license: "MIT"
+author: "jagapathi-meesala"
+tools:
+  - experiment_manifest_audit
+  - environment_drift_check
+  - reproducibility_report
+skills:
+  - experiment-manifest-audit
+  - environment-drift-check
+  - reproducibility-report

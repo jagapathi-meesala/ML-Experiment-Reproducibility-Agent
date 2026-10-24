@@ -1,0 +1,14 @@
+required_manifest_fields:
+  - experiment_id
+  - code_revision
+  - dataset
+  - random_seed
+  - parameters
+  - environment
+  - metrics
+  - expected_artifacts
+environment_fields_to_compare:
+  - python_version
+  - framework
+  - framework_version
+  - accelerator

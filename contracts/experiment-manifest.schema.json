@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ML Experiment Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "experiment_id",
+    "code_revision",
+    "dataset",
+    "random_seed",
+    "parameters",
+    "environment",
+    "metrics",
+    "expected_artifacts"
+  ],
+  "properties": {
+    "experiment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "type": "object",
+      "required": [
+        "identifier"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "checksum": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "random_seed": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "expected_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

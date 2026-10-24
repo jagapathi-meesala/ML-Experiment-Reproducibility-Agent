@@ -1,0 +1,23 @@
+name: reproducibility_report
+description: Combine manifest, environment, and artifact inventory findings into a JSON report.
+input_schema:
+  type: object
+  additionalProperties: false
+  required:
+    - manifest
+  properties:
+    manifest:
+      type: object
+    reference_environment:
+      type: object
+    artifact_inventory:
+      type: array
+      items:
+        type: string
+output_schema:
+  type: object
+  required:
+    - agent
+    - status
+    - findings
+    - limitations

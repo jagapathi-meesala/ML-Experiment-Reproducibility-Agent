@@ -1,0 +1,17 @@
+name: experiment_manifest_audit
+description: Validate required reproducibility metadata in a supplied experiment manifest.
+input_schema:
+  type: object
+  additionalProperties: false
+  required:
+    - manifest
+  properties:
+    manifest:
+      type: object
+      description: Parsed experiment manifest JSON object.
+output_schema:
+  type: object
+  required:
+    - status
+    - findings
+    - summary
